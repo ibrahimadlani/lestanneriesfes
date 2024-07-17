@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import CartItem from "./CartItem";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const products = [
   {
@@ -41,9 +42,12 @@ const CartModal = () => {
 
         <form className="mx-auto max-w-2xl px-4">
           <div className="lg:hidden py-4 border-b">
-            <img
+            <Image
               src="/images/logos/logo_center.svg"
               className="mx-auto h-24 w-24"
+              alt="logo"
+              width={96}
+              height={96}
             />
           </div>
           <ul role="list" className="divide-y divide-gray-200">
